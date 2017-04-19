@@ -64,7 +64,7 @@ namespace BikeRacingConsole
                 {
                     Pedal();
 
-                    Thread.Sleep(point.Length / Speed);
+                    Thread.Sleep(point.Length / Speed * 1000);
                 }
                 else
                 {
@@ -73,10 +73,10 @@ namespace BikeRacingConsole
                         Breaking();
                     }
 
-                    Thread.Sleep(point.Length / Speed);
+                    Thread.Sleep(point.Length / Speed * 1000);
                 }
 
-                Console.WriteLine(Name + " passed " + point.Name + " at " + DateTime.Now);
+                Console.WriteLine(Name + " passed " + point.Name + " at " + DateTime.Now.ToLongTimeString());
             }
         }
 

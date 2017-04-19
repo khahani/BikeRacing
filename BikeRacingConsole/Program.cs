@@ -25,7 +25,10 @@ namespace BikeRacingConsole
             mohammadi.Name = "M";
             mohammadi.PushPower = 3;
             mohammadi.RoundPerMinutes = 5;
-
+            Ciclist saeed = new Ciclist(bike);
+            saeed.Name = "Saeed";
+            saeed.PushPower = 10;
+            saeed.RoundPerMinutes = 10;
 
             Map map = new Map();
             map.AddPoint(new Point() { Name = "p1", Type = PointType.Straight, Length = 1000, MaxSpeed = 100 });
@@ -38,6 +41,7 @@ namespace BikeRacingConsole
 
             khahani.RegisterOnCompetition(c1);
             mohammadi.RegisterOnCompetition(c1);
+            saeed.RegisterOnCompetition(c1);
 
             c1.Start();
 
